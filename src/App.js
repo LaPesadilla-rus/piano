@@ -17,43 +17,33 @@ function App() {
   const sound_six = new Audio(sos)
   const sound_seven = new Audio(sosv)
   
-  const sOne =()=>{
-    sound_one.play();
-  }
-
-  const sTwo =()=>{
-    sound_two.play();
-  }
-  const sTr =()=>{
-    sound_three.play();
-  }
-
-  const sF =()=>{
-    sound_four.play();
-  }
-  const sFv =()=>{
-    sound_five.play();
-  }
-
-  const sSx =()=>{
-    sound_six.play();
-  }
-  const sSv=()=>{
-    sound_seven.play();
-  }
+  
+  const PlayPiano=(event)=>{
+   if (event.key==='a'){sound_one.play()}
+   if (event.key==='s'){sound_two.play()}
+   if (event.key==='d'){sound_three.play()}
+   if (event.key==='f'){sound_four.play()}
+   if (event.key==='g'){sound_five.play()}
+   if (event.key==='h'){sound_six.play()}
+   if (event.key==='j'){sound_seven.play()}
+    }
+  
 
 
   return (
-    <div className="App">
+    <div className="App" onKeyPress={PlayPiano}>
       <header className="App-header"> 
-      <div className='back'>
-     <button onClick={sOne}></button>
-     <button onClick={sTwo}></button>
-     <button onClick={sTr}></button>
-     <button onClick={sF}></button>
-     <button onClick={sFv}></button>
-     <button onClick={sSx}></button>
-     <button onClick={sSv}></button>
+        <div>
+          <button className='go'>GO</button>
+        </div>
+        <div className='back' >
+          <button ></button>
+          <button ></button>
+          <button ></button>
+          <button ></button>
+          <button ></button>
+          <button ></button>
+          <button ></button>
       </div>
       </header>
      
